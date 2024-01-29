@@ -39,6 +39,7 @@
     <script>
         document.getElementById('item2').addEventListener('click', function() {
             console.log('Item2 clicked');
+            event.stopPropagation();
         })
 
         document.getElementById('list-ul').addEventListener('click', function() {
