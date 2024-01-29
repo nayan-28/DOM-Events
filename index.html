@@ -10,8 +10,25 @@
 
 <body>
     <h1 onclick="console.log('I am Clicked')">Colo DOM Shikhi</h1>
-    <button onclick="console.log(7)">Click Me</button>
+    <button onclick="console.log(7)">Click Me</button><br><br>
+
+    <button onclick="document.body.style.backgroundColor='Yellow'">Make Yellow</button>
+    <button onclick="makeRed()">Make Red</button>
+    <button id="make-green">Make Green</button>
     <script src="JS/events.js"></script>
+    <script>
+        function makeRed() {
+            document.body.style.backgroundColor = 'Red';
+        }
+    </script>
+    <script>
+        const makeGreenButton = document.getElementById('make-green');
+        makeGreenButton.onclick = makeGreen;
+
+        function makeGreen() {
+            document.body.style.backgroundColor = 'Green';
+        }
+    </script>
 </body>
 
 </html>
